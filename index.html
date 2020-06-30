@@ -29,7 +29,7 @@
       </a>
     </div>
     <ul class="menu mb--hidden">
-      <li class="menu--item"><a href="#" class="menu--item--link js-join" onclick="join()">Join the Movement</a></li>
+      <li class="menu--item"><a href="#" class="menu--item--link js-join">Join the Movement</a></li>
       <li class="menu--item">
         <a href="" class="menu--item--link menu--item--link__cta pill">Get early access</a>
       </li>
@@ -192,16 +192,19 @@
   </footer>
 
   <script type="text/javascript">
-    const join = () => {
+    const joinLink = document.querySelector('.js-join');
 
-      const joinAnchor = document.getElementById("join");
-      console.log(joinAnchor);
+    function scrollThisStuff() {
+      console.log("scroll");
+      const joinAnchor = document.querySelector('#join');
       joinAnchor.scrollIntoView({
         behavior: "smooth",
         block: "end",
         inline: "nearest"
       });
     };
+
+    joinLink.addEventListener("click", scrollThisStuff, false);
   </script>
 </body>
 

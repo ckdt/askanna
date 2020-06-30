@@ -29,7 +29,7 @@
       </a>
     </div>
     <ul class="menu mb--hidden">
-      <li class="menu--item"><a href="" class="menu--item--link">Join the Movement</a></li>
+      <li class="menu--item"><a href="#" class="menu--item--link js-join" onclick="join()">Join the Movement</a></li>
       <li class="menu--item">
         <a href="" class="menu--item--link menu--item--link__cta pill">Get early access</a>
       </li>
@@ -157,7 +157,7 @@
     </div>
   </section>
 
-  <section class="subscribe">
+  <section class="subscribe" id="join">
     <h2 class="subscribe--title">Join the Movement.</h2>
     <div class="subscribe--note">
       <svg class="note--icon note--icon_spark" width="100%" height="100%" viewBox="0 0 53 91" fill="none"
@@ -190,6 +190,19 @@
     <p>Copyright ©2020 AskAnna. All rights reserved.</p>
     <p><a class="footer--link" href="mailto:hello@askanna.io">hello@askanna.io</a></p>
   </footer>
+
+  <script type="text/javascript">
+    const join = () => {
+
+      const joinAnchor = document.getElementById("join");
+      console.log(joinAnchor);
+      joinAnchor.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest"
+      });
+    };
+  </script>
 </body>
 
 </html>

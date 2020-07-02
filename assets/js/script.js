@@ -1,7 +1,8 @@
 const joinLink = document.querySelector('.js-join');
+joinLink.addEventListener('click', scrollToJoin, false);
 
-function scrollThisStuff() {
-  console.log('scroll');
+function scrollToJoin(e) {
+  e.preventDefault();
   const joinAnchor = document.querySelector('#join');
   joinAnchor.scrollIntoView({
     behavior: 'smooth',
@@ -10,4 +11,15 @@ function scrollThisStuff() {
   });
 }
 
-joinLink.addEventListener('click', scrollThisStuff, false);
+const manifestoLink = document.querySelector('.js-manifesto');
+manifestoLink.addEventListener('click', scrollToManifesto, false);
+
+function scrollToManifesto(e) {
+  e.preventDefault();
+  const manifestoAnchor = document.querySelector('#manifesto');
+  manifestoAnchor.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+    inline: 'nearest'
+  });
+}
